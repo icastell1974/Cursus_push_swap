@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:52:42 by icastell          #+#    #+#             */
-/*   Updated: 2022/01/03 18:59:30 by icastell         ###   ########.fr       */
+/*   Updated: 2022/01/27 21:57:29 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,34 +21,43 @@
 # include <unistd.h>
 # include "../libft/libft.h"
 
-typedef struct s_Nodo
+typedef struct s_nodo
 {
 	int				value;
     int				index;
-	struct s_Nodo	*next;
-}				t_Nodo;
+	struct s_nodo	*next;
+}				t_nodo;
 
-typedef struct s_Lista
+typedef struct s_lista
 {
-	struct s_Nodo	*head;
+	struct s_nodo	*head;
 	int				length;
-}			t_Lista;
+}			t_lista;
 
 
 char    *ft_args_in_a_string(int arg_num, char **arg);
-int		ft_take_params_from_string(char	*str, t_Lista *lista);
+int		ft_take_params_from_string(char	*str, t_lista *lista);
 int		ft_check_valid_num(char *str);
-int		ft_check_repeated_num(t_Lista *lista, int num);
+int		ft_check_repeated_num(t_lista *lista, int num);
 //int			ft_check_repeated_num(t_list_num *lista);
-t_Nodo	*ft_lst_new_nodo(int content);
-void	ft_lst_free_nodo(t_Nodo *nodo);
-void	ft_lst_add_front(t_Lista *lista, int content);
-void	ft_lst_add_back(t_Lista *lista, int content);
-void	ft_lst_delete_from_first_one(t_Lista *lista);
-void	ft_lst_delete_from_last_one(t_Lista *lista);
-int		ft_lst_repeated_num(t_Lista *lista, int num);
+t_nodo	*ft_lst_new_nodo(int content);
+void	ft_lst_free_nodo(t_nodo *nodo);
+void	ft_lst_add_front(t_lista *lista, int content);
+void	ft_lst_add_back(t_lista *lista, int content);
+void	ft_lst_delete_from_first_one(t_lista *lista);
+void	ft_lst_delete_from_last_one(t_lista *lista);
+int		ft_lst_repeated_num(t_lista *lista, int num);
 //void		ft_lst_iter(t_list_num *lst, void (*f)(void *));
-void		ft_sort();
+void	ft_sort(t_lista *lista_a, t_lista *lista_b);
+void    ft_lst_sa_sb(t_lista *lista, char *str);
+void    ft_lst_ss(t_lista *lista_a, t_lista *lista_b, char *str);
+void    ft_lst_ra_rb(t_lista *lista, char *str);
+void    ft_lst_rr(t_lista *lista_a, t_lista *lista_b, char *str);
+void    ft_lst_rra_rrb(t_lista *lista, char *str);
+void    ft_lst_rrr(t_lista *lista_a, t_lista *lista_b, char *str);
+void	ft_lst_pa(t_lista *lista_a, t_lista *lista_b, char *str);
+void	ft_lst_pb(t_lista *lista_a, t_lista *lista_b, char *str);
+//void    ft_lst_sa(t_lista *lista);
 /*char	*ft_itoa(int n);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_bzero(void *ptr, size_t n);

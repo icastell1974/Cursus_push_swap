@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 20:54:30 by icastell          #+#    #+#             */
-/*   Updated: 2022/01/04 20:32:07 by icastell         ###   ########.fr       */
+/*   Updated: 2022/01/24 19:48:00 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_args_in_a_string(int arg_num, char **arg)
 	return (str);
 }
 
-static int	ft_check_params(t_Lista *lista, char *param)
+static int	ft_check_params(t_lista *lista, char *param)
 {
 	if ((!ft_check_valid_num(param))
 		|| (!ft_check_repeated_num(lista, ft_atoi(param))))
@@ -38,7 +38,7 @@ static int	ft_check_params(t_Lista *lista, char *param)
 	return (1);
 }
 
-int	ft_take_params_from_string(char	*str, t_Lista *lista)
+int	ft_take_params_from_string(char	*str, t_lista *lista)
 {
 	int		i;
 	int		j;

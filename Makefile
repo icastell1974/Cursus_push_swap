@@ -6,7 +6,7 @@
 #    By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 18:18:35 by icastell          #+#    #+#              #
-#    Updated: 2022/01/03 18:37:45 by icastell         ###   ########.fr        #
+#    Updated: 2022/01/27 21:37:48 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,12 @@ SRCS	=	$(SRC)/ft_args_in_a_string.c\
 			$(SRC)/ft_check_repeated_num.c\
 			$(SRC)/ft_lst_utils.c\
 			$(SRC)/ft_sort.c\
+			$(SRC)/ft_sa_sb_ss.c\
+			$(SRC)/ft_ra_rb_rr.c\
+			$(SRC)/ft_rra_rrb_rrr.c\
+			$(SRC)/ft_pa_pb.c\
 
-OBJS	:=	$(SRCS:.c=.o)
+OBJS	:=	$(SRCS:.c=.o) $(P_SWAP:.c=.o)
 
 all:	$(NAME)
 

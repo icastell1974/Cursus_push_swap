@@ -6,17 +6,17 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 17:25:09 by icastell          #+#    #+#             */
-/*   Updated: 2022/01/04 18:53:41 by icastell         ###   ########.fr       */
+/*   Updated: 2022/01/11 22:47:55 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/push_swap.h"
 
-t_Nodo	*ft_lst_new_nodo(int content)
+t_nodo	*ft_lst_new_nodo(int content)
 {
-	t_Nodo	*nodo;
+	t_nodo	*nodo;
 
-	nodo = (t_Nodo *)malloc(sizeof(t_Nodo));
+	nodo = (t_nodo *)malloc(sizeof(t_nodo));
 	if (nodo)
 	{
 		nodo->value = content;
@@ -26,15 +26,15 @@ t_Nodo	*ft_lst_new_nodo(int content)
 	return (nodo);
 }
 
-void	ft_lst_free_nodo(t_Nodo *nodo)
+void	ft_lst_free_nodo(t_nodo *nodo)
 {
 	free(nodo);
 	return ;
 }
 
-void	ft_lst_add_front(t_Lista *lista, int content)
+void	ft_lst_add_front(t_lista *lista, int content)
 {
-	t_Nodo	*nodo;
+	t_nodo	*nodo;
 
 	nodo = ft_lst_new_nodo(content);
 	nodo->next = lista->head;
@@ -43,10 +43,10 @@ void	ft_lst_add_front(t_Lista *lista, int content)
 	return ;
 }
 
-void	ft_lst_add_back(t_Lista *lista, int content)
+void	ft_lst_add_back(t_lista *lista, int content)
 {
-	t_Nodo	*nodo;
-	t_Nodo	*puntero;
+	t_nodo	*nodo;
+	t_nodo	*puntero;
 
 	nodo = ft_lst_new_nodo(content);
 	if (lista->head == NULL)
@@ -62,9 +62,9 @@ void	ft_lst_add_back(t_Lista *lista, int content)
 	return ;
 }
 
-void	ft_lst_delete_from_first_one(t_Lista *lista)
+void	ft_lst_delete_from_first_one(t_lista *lista)
 {
-	t_Nodo	*deleted_nodo;
+	t_nodo	*deleted_nodo;
 
 	if (lista->head)
 	{
@@ -76,10 +76,10 @@ void	ft_lst_delete_from_first_one(t_Lista *lista)
 	return ;
 }
 
-void	ft_lst_delete_form_last_one(t_Lista *lista)
+void	ft_lst_delete_form_last_one(t_lista *lista)
 {
-	t_Nodo	*puntero;
-	t_Nodo	*deleted_nodo;
+	t_nodo	*puntero;
+	t_nodo	*deleted_nodo;
 
 	if (lista->head)
 	{
@@ -104,9 +104,9 @@ void	ft_lst_delete_form_last_one(t_Lista *lista)
 	return ;
 }
 
-int	ft_lst_repeated_num(t_Lista *lista, int num)
+int	ft_lst_repeated_num(t_lista *lista, int num)
 {
-	t_Nodo	*puntero;
+	t_nodo	*puntero;
 
 	puntero = lista->head;
 	while (puntero)
