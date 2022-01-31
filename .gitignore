@@ -2,3 +2,4 @@
 .vscode
 Makefile de minitalk
 push_swap.dSYM
+*.o

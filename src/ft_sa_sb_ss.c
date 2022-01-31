@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 22:40:47 by icastell          #+#    #+#             */
-/*   Updated: 2022/01/27 20:20:01 by icastell         ###   ########.fr       */
+/*   Updated: 2022/01/28 20:48:55 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void    ft_lst_sa_sb(t_lista *lista, char *str)
 void    ft_lst_ss(t_lista *lista_a, t_lista *lista_b, char *str)
 {
     ft_putstr_fd(str, 1);
-    ft_lst_sa_sb(lista_a, "");
-    ft_lst_sa_sb(lista_b, "");
+    ft_lst_sa_sb(lista_a, NULL);
+    ft_lst_sa_sb(lista_b, NULL);
     return ;
 }
