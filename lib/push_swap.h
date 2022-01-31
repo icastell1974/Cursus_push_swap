@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:52:42 by icastell          #+#    #+#             */
-/*   Updated: 2022/01/27 21:57:29 by icastell         ###   ########.fr       */
+/*   Updated: 2022/01/31 16:46:42 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_lst_delete_from_first_one(t_lista *lista);
 void	ft_lst_delete_from_last_one(t_lista *lista);
 int		ft_lst_repeated_num(t_lista *lista, int num);
 //void		ft_lst_iter(t_list_num *lst, void (*f)(void *));
-void	ft_sort(t_lista *lista_a, t_lista *lista_b);
+void	ft_sort(t_lista *lista_a);//), t_lista *lista_b);
 void    ft_lst_sa_sb(t_lista *lista, char *str);
 void    ft_lst_ss(t_lista *lista_a, t_lista *lista_b, char *str);
 void    ft_lst_ra_rb(t_lista *lista, char *str);
@@ -57,6 +57,11 @@ void    ft_lst_rra_rrb(t_lista *lista, char *str);
 void    ft_lst_rrr(t_lista *lista_a, t_lista *lista_b, char *str);
 void	ft_lst_pa(t_lista *lista_a, t_lista *lista_b, char *str);
 void	ft_lst_pb(t_lista *lista_a, t_lista *lista_b, char *str);
+void	ft_sorting_case_1(t_lista *lista);
+void	ft_sorting_case_2(t_lista *lista);
+void	ft_sorting_case_3(t_lista *lista);
+void	ft_sorting_case_4(t_lista *lista);
+void	ft_sorting_case_5(t_lista *lista);
 //void    ft_lst_sa(t_lista *lista);
 /*char	*ft_itoa(int n);
 void	*ft_calloc(size_t count, size_t size);
