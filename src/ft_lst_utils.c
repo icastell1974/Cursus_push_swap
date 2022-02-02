@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 17:25:09 by icastell          #+#    #+#             */
-/*   Updated: 2022/01/11 22:47:55 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:58:55 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,4 +144,62 @@ int	ft_lst_repeated_num(t_lista *lista, int num)
 			return (0);*/
 	//}
 	return (1);
+}
+
+int	ft_lst_position(t_lista *lista, int num)
+{
+	t_nodo	*puntero;
+	int		position;
+
+	position = 0;
+	if (lista->head)
+	{
+		puntero = lista->head;
+		while (puntero->next)
+		{
+			if (puntero->value == num)
+				break;
+			puntero = puntero->next;
+			position++;
+		}
+	}
+	return (position);
+}
+
+int	ft_lst_find_min(t_lista *lista, int min_value)
+{
+	t_nodo	*puntero;
+	int		min;
+
+	min = INT_MAX;
+	if (lista->head)
+	{
+		puntero = lista->head;
+		while (puntero)
+		{
+			if ((puntero->value < min) && (puntero->value > min_value))
+				min = puntero->value;
+			puntero = puntero->next;
+		}
+	}
+	return (min);
+}
+
+int	ft_lst_find_max(t_lista *lista)
+{
+	t_nodo	*puntero;
+	int		max;
+
+	max = INT_MIN;
+	if (lista->head)
+	{
+		puntero = lista->head;
+		while (puntero)
+		{
+			if (puntero->value > max)
+				max = puntero->value;
+			puntero = puntero->next;
+		}
+	}
+	return (max);
 }
