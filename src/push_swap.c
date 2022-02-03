@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 17:13:27 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/02 20:05:00 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/03 20:34:25 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,14 +79,17 @@ static void	ft_lst_print_value(t_lista *lista, char *str)
 	t_nodo	*puntero;
 	int		i;
 
-	ft_putstr_fd(str, 1);
-	puntero = lista->head;
-	i = 0;
-	while (puntero)
+	if (lista->head)
 	{
-		printf("Elemento %d de la lista: %d\n", i, puntero->value);
-		i++;
-		puntero = puntero->next;
+		ft_putstr_fd(str, 1);
+		puntero = lista->head;
+		i = 0;
+		while (puntero)
+		{
+			printf("Elemento %d de la lista: %d\n", i, puntero->value);
+			i++;
+			puntero = puntero->next;
+		}
 	}
 	return ;
 }
@@ -115,7 +118,9 @@ int	main(int argc, char **argv)
 			if (!ft_lst_is_sorted(&list_a))
 			{
 				ft_putstr_fd("lista desordenada\n", 1);
-				ft_sort(&list_a, &list_b); //comenzamos a ordenar
+				//ft_sort(&list_a, &list_b); //comenzamos a ordenar
+				//ft_recursive_sort(&list_a, &list_b);
+				ft_sort_elements(&list_a, &list_b);
 			}
 			else
 				ft_putstr_fd("lista ordenada\n", 1);

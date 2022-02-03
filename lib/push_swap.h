@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:52:42 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/02 19:44:49 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/03 20:25:53 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,16 @@ void	ft_lst_add_back(t_lista *lista, int content);
 void	ft_lst_delete_from_first_one(t_lista *lista);
 void	ft_lst_delete_from_last_one(t_lista *lista);
 int		ft_lst_repeated_num(t_lista *lista, int num);
+int		ft_lst_is_sorted(t_lista *lista);
 int		ft_lst_position(t_lista *lista, int num);
 int		ft_lst_find_min(t_lista *lista, int min_value);
 int		ft_lst_find_max(t_lista *lista);
+void	ft_lst_rotate(t_lista *lista_a, int value);
 //void		ft_lst_iter(t_list_num *lst, void (*f)(void *));
-int		ft_lst_is_sorted(t_lista *lista);
-void	ft_sort(t_lista *lista_a, t_lista *lista_b);
+//void	ft_sort(t_lista *lista_a, t_lista *lista_b);
+void	ft_sort_elements(t_lista *lista_a, t_lista *lista_b);
+void	ft_simple_sort(t_lista *lista_a, t_lista *lista_b);
+void	ft_min_return(t_lista *lista_a, t_lista *lista_b);
 void    ft_lst_sa_sb(t_lista *lista, char *str);
 void    ft_lst_ss(t_lista *lista_a, t_lista *lista_b, char *str);
 void    ft_lst_ra_rb(t_lista *lista, char *str);

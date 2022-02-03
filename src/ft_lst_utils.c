@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 17:25:09 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/02 20:58:55 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/03 20:18:22 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,6 +146,34 @@ int	ft_lst_repeated_num(t_lista *lista, int num)
 	return (1);
 }
 
+int	ft_lst_is_sorted(t_lista *lista)
+{
+	//int		valor1;
+	//int		valor2;
+	t_nodo	*puntero;
+
+	//valor1 = 0;
+	//valor2 = 0;
+	if (lista->head)
+	{
+		puntero = lista->head;
+		while (puntero->next)
+		{
+			if (puntero->value > puntero->next->value)
+				return (0);
+			
+			/*valor1 = puntero->value;
+			valor2 = puntero->next->value;
+			if (valor1 > valor2)
+				return (0);*/
+			puntero = puntero->next;
+		}
+	}
+	else
+		return (0); // ¿se podría devolver otro valor para indicar que la lista no existe....? Quizás sí sería interesante
+	return (1);
+}
+
 int	ft_lst_position(t_lista *lista, int num)
 {
 	t_nodo	*puntero;
@@ -202,4 +230,26 @@ int	ft_lst_find_max(t_lista *lista)
 		}
 	}
 	return (max);
+}
+
+void	ft_lst_rotate(t_lista *lista_a, int value)
+{
+	int	position;
+	int	rotation_num;
+
+	rotation_num = 0;
+	position = ft_lst_position(lista_a, value);
+	if (position < lista_a->length - position)
+	{
+		rotation_num = position;
+		while (rotation_num-- > 0)
+			ft_lst_ra_rb(lista_a, "ra\n");
+	}
+	else
+	{
+		rotation_num = lista_a->length - position;
+		while (rotation_num-- > 0)
+			ft_lst_rra_rrb(lista_a, "rra\n");
+	}
+	return ;
 }
