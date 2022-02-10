@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 17:13:27 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/03 20:34:25 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/07 19:48:33 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,9 +100,10 @@ int	main(int argc, char **argv)
 	t_lista	list_a;
 	t_lista	list_b;
 
-	if (argc == 1)
+	/*if (argc == 1)
 		ft_error();
-	else
+	else*/
+	if (argc > 1)
 	{
 		args = ft_args_in_a_string(argc, argv);
 		list_a.head = NULL;

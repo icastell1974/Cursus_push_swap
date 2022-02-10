@@ -6,7 +6,7 @@
 #    By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 18:18:35 by icastell          #+#    #+#              #
-#    Updated: 2022/02/03 20:23:14 by icastell         ###   ########.fr        #
+#    Updated: 2022/02/09 17:20:02 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS	=	$(SRC)/ft_args_in_a_string.c\
 			$(SRC)/ft_sort.c\
 			$(SRC)/ft_simple_sort.c\
 			$(SRC)/ft_sorting_cases_3_elements.c\
+			$(SRC)/ft_radix_sort.c\
 
 OBJS	:=	$(SRCS:.c=.o) $(P_SWAP:.c=.o)
 

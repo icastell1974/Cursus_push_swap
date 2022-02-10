@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:52:42 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/03 20:25:53 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/10 19:30:46 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ void	ft_lst_rotate(t_lista *lista_a, int value);
 void	ft_sort_elements(t_lista *lista_a, t_lista *lista_b);
 void	ft_simple_sort(t_lista *lista_a, t_lista *lista_b);
 void	ft_min_return(t_lista *lista_a, t_lista *lista_b);
+void	ft_assign_index(t_lista *lista);
+void	ft_radix_sort(t_lista *lista_a, t_lista *lista_b);
 void    ft_lst_sa_sb(t_lista *lista, char *str);
 void    ft_lst_ss(t_lista *lista_a, t_lista *lista_b, char *str);
 void    ft_lst_ra_rb(t_lista *lista, char *str);
