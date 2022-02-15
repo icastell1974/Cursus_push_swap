@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 21:35:18 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/10 20:52:32 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/14 13:19:46 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	ft_add_front_to_stack(t_lista *lista, int content, int index)
 void	ft_lst_pa(t_lista *lista_a, t_lista *lista_b, char *str)
 {
 	t_nodo	*puntero_tmp;
-	
+
 	if (str != NULL)
 		ft_putstr_fd(str, 1);
 	if (lista_b->head)
@@ -55,7 +55,7 @@ void	ft_lst_pa(t_lista *lista_a, t_lista *lista_b, char *str)
 void	ft_lst_pb(t_lista *lista_a, t_lista *lista_b, char *str)
 {
 	t_nodo	*puntero_tmp;
-	
+
 	if (str != NULL)
 		ft_putstr_fd(str, 1);
 	if (lista_a->head)

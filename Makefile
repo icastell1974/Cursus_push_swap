@@ -6,7 +6,7 @@
 #    By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 18:18:35 by icastell          #+#    #+#              #
-#    Updated: 2022/02/09 17:20:02 by icastell         ###   ########.fr        #
+#    Updated: 2022/02/14 13:37:02 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ $(NAME)	:	$(OBJS)
 	$(CC) $(CFLAGS) $(SRCS) $(P_SWAP) $(LIBFT) -o $(NAME)
 
 normi:
-			norminette -R CheckForbiddenSourceHeader $(SRCS) $(LIB)
+			norminette -R CheckForbiddenSourceHeader $(SRCS) $(LIB) $(P_SWAP)
 
 clean:
 			rm -f $(OBJS)

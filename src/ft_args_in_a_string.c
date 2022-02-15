@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 20:54:30 by icastell          #+#    #+#             */
-/*   Updated: 2022/01/24 19:48:00 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/14 13:14:04 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ char	*ft_args_in_a_string(int arg_num, char **arg)
 		str = ft_strjoin(str, " ");
 		i++;
 	}
-	printf("String con los argumentos de entrada: %s", str);
-	printf("\n");
 	return (str);
 }
 

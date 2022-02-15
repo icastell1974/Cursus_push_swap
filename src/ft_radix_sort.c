@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 17:17:34 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/10 21:32:11 by icastell         ###   ########.fr       */
+/*   Created: 2022/02/11 20:07:32 by icastell          #+#    #+#             */
+/*   Updated: 2022/02/14 13:58:34 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 void	ft_assign_index(t_lista *lista)
 {
 	int		value_min;
-	int		value;
 	int		index;
 	t_nodo	*puntero;
 
 	value_min = INT_MIN;
-	value = 0;
 	index = 0;
 	if (lista->head)
 	{
@@ -29,8 +27,7 @@ void	ft_assign_index(t_lista *lista)
 			puntero = lista->head;
 			while (puntero)
 			{
-				value = ft_lst_find_min(lista, value_min);
-				if (value == puntero->value)
+				if (ft_lst_find_min(lista, value_min) == puntero->value)
 				{
 					puntero->index = index;
 					value_min = puntero->value;
@@ -41,7 +38,6 @@ void	ft_assign_index(t_lista *lista)
 			index++;
 		}
 	}
-
 }
 
 void	ft_radix_sort(t_lista *lista_a, t_lista *lista_b)
@@ -54,7 +50,7 @@ void	ft_radix_sort(t_lista *lista_a, t_lista *lista_b)
 	j = 0;
 	if (lista_a->head)
 	{
-		size = lista_a->length;  
+		size = lista_a->length;
 		while (!ft_lst_is_sorted(lista_a))
 		{
 			while (j++ < size)

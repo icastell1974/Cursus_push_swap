@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 17:25:09 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/03 20:18:22 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/14 13:17:29 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,12 +148,8 @@ int	ft_lst_repeated_num(t_lista *lista, int num)
 
 int	ft_lst_is_sorted(t_lista *lista)
 {
-	//int		valor1;
-	//int		valor2;
 	t_nodo	*puntero;
 
-	//valor1 = 0;
-	//valor2 = 0;
 	if (lista->head)
 	{
 		puntero = lista->head;
@@ -161,11 +157,6 @@ int	ft_lst_is_sorted(t_lista *lista)
 		{
 			if (puntero->value > puntero->next->value)
 				return (0);
-			
-			/*valor1 = puntero->value;
-			valor2 = puntero->next->value;
-			if (valor1 > valor2)
-				return (0);*/
 			puntero = puntero->next;
 		}
 	}
