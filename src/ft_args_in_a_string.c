@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 20:54:30 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/14 13:14:04 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/15 21:07:50 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_args_in_a_string(int arg_num, char **arg)
 	char	*str;
 
 	i = 1;
-	str = ft_strdup("");
+	str = ft_strdup_v2("");
 	while (i < arg_num)
 	{
-		str = ft_strjoin(str, arg[i]);
-		str = ft_strjoin(str, " ");
+		str = ft_strjoin_v2(str, arg[i]);
+		str = ft_strjoin_v2(str, " ");
 		i++;
 	}
 	return (str);

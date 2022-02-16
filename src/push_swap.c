@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 17:13:27 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/11 19:26:34 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/15 21:03:06 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ int	main(int argc, char **argv)
 		//ft_lst_add_back(&list_a, 10);
 		if (ft_take_params_from_string(args, &list_a))
 		{
-			//ft_lst_print_value(&list_a); //Función temporal que sirve para comprobar. Ojo, borrar para entregar
+			//ft_lst_print_value(&list_a, "lista a:\n"); //Función temporal que sirve para comprobar. Ojo, borrar para entregar
 			//&& (ft_check_repeated_num(list_a)))
 			if (!ft_lst_is_sorted(&list_a))
 			{

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strdup_v2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/15 12:50:12 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/15 20:12:35 by icastell         ###   ########.fr       */
+/*   Created: 2022/02/15 20:10:46 by icastell          #+#    #+#             */
+/*   Updated: 2022/02/15 20:16:38 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,25 @@ memory is available, NULL is returned and errno is set to ENOMEM.*/
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_strdup_v2(char *str)
 {
 	size_t	longitud;
+	int		i;
 	char	*ptr;
 
-	longitud = 0;
-	while (str[longitud] != '\0')
-		longitud++;
+	i = 0;
+	longitud = ft_strlen(str);
 	ptr = malloc(longitud + 1);
 	if (!ptr)
 		return (NULL);
-	ptr = ft_memcpy(ptr, str, longitud + 1);
+	else
+	{
+		while (str[i] != '\0')
+		{
+			ptr[i] = str[i];
+			i++;
+		}
+	}
+	ptr[i] = '\0';
 	return (ptr);
 }

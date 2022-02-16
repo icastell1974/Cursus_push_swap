@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 20:10:09 by icastell          #+#    #+#             */
-/*   Updated: 2021/12/26 21:13:04 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/15 20:23:30 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,12 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_calloc(size_t count, size_t size);
-char	*ft_strdup(char *str);
+char	*ft_strdup(const char *str);
+char	*ft_strdup_v2(char *str);
 char	*ft_strcdup(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin_v2(char *s1, char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);

@@ -6,14 +6,13 @@
 #    By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/09 12:10:34 by icastell          #+#    #+#              #
-#    Updated: 2021/12/23 19:43:55 by icastell         ###   ########.fr        #
+#    Updated: 2022/02/15 21:11:06 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FLAGS = -Wall -Werror -Wextra
-
 SRCS =	ft_memset.c\
 		ft_bzero.c\
 		ft_memcpy.c\
@@ -38,9 +37,11 @@ SRCS =	ft_memset.c\
 		ft_tolower.c\
 		ft_calloc.c\
 		ft_strdup.c\
+		ft_strdup_v2.c\
 		ft_strcdup.c\
 		ft_substr.c\
 		ft_strjoin.c\
+		ft_strjoin_v2.c\
 		ft_strtrim.c\
 		ft_split.c\
 		ft_itoa.c\
