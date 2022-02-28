@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_valid_num.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 19:18:42 by icastell          #+#    #+#             */
-/*   Updated: 2022/02/02 19:31:46 by icastell         ###   ########.fr       */
+/*   Updated: 2022/02/28 10:39:56 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/push_swap.h"
-
-//#define MAX "2147483647"
-//#define MIN "-2147483648"
 
 static int	ft_strisdigit(char *str)
 {

@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: icastell <icastell@student.42madrid.com>   +#+  +:+       +#+         #
+#    By: icastell <icastell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 18:18:35 by icastell          #+#    #+#              #
-#    Updated: 2022/02/16 17:36:44 by icastell         ###   ########.fr        #
+#    Updated: 2022/02/28 11:37:44 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	push_swap
 CC		=	gcc
-CFLAGS	=	-Wall -Werror -Wextra -g3 -fsanitize=address
+CFLAGS	=	-Wall -Werror -Wextra
 MKDIR	=	mkdir -p 
 SRC		=	src
 
@@ -44,10 +44,10 @@ $(NAME)	:	$(OBJS)
 	$(CC) $(CFLAGS) $(SRCS) $(P_SWAP) $(LIBFT) -o $(NAME)
 
 normi:
+#			norminette -R CheckForbiddenSourceHeader | grep "Error"
 #			norminette -R CheckForbiddenSourceHeader $(SRCS) $(LIB) $(P_SWAP)
-#			norminette -R CheckForbiddenSourceHeader
-			norminette -R CheckForbiddenSourceHeader | grep "Error"
-			norminette -R CheckForbiddenSourceHeader | grep "OK"
+			norminette -R CheckForbiddenSourceHeader
+#			norminette -R CheckForbiddenSourceHeader | grep "OK"
 
 clean:
 			rm -f $(OBJS)
@@ -60,4 +60,4 @@ fclean_all:	fclean
 
 re:		fclean_all all
 
-.PHONY:	all clean fclean re fclean_all
+.PHONY:	all clean fclean re fclean_all normi
